@@ -1,4 +1,6 @@
 import { useNavigate } from 'react-router-dom';
+import { XCircleIcon } from "@heroicons/react/24/outline";
+import useFavourite from 'src/hooks/useFavourite';
 
 interface SmallCardProps {
   id: string;
@@ -10,6 +12,7 @@ interface SmallCardProps {
 
 const SmallCard = ({ id, city, country, heroImg, setIsShowFavourites }: SmallCardProps) => {
   const navigate = useNavigate();
+  const { removeFavourite } =  useFavourite();
 
   const onClickHandler = () => {
     setIsShowFavourites(false);
@@ -28,6 +31,11 @@ const SmallCard = ({ id, city, country, heroImg, setIsShowFavourites }: SmallCar
         <span className="text-sm font-semibold">
           {city}, {country}
         </span>
+      </div>
+      <div>
+        <XCircleIcon className="h-6 cursor-pointer hover:scale-105" 
+              onClick={() => removeFavourite(id)}
+              />
       </div>
     </div>
   );
