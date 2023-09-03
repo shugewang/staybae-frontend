@@ -17,7 +17,9 @@ interface PropertyType {
     sharedProperty: boolean;
     heroImg: string;
     images: string[];
-    favourited?: boolean
+    favourited?: boolean;
+    lat: number;
+    lon: number;
 }
 
 export default PropertyType;
