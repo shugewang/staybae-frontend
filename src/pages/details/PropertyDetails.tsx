@@ -90,8 +90,6 @@ const PropertyDetails = () => {
     });
   });
   
-  //maps.googleapis.com/maps/api/place/nearbysearch/json?keyword=cruise&location=-33.8670522%2C151.1957362&radius=1500&type=restaurant&key=AIzaSyAKfoTgQmPxaBA9RQvnVwNPS0BuSfKakik
-
   https: return (
     <main className="max-w-full px-8 sm:px-16 ml-16 mr-16">
       <div className="flex justify-between ml-4">
