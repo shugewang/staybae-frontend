@@ -30,10 +30,6 @@ export const Map = ({ searchLocation, region, searchResults }: MapProps) => {
       : setCenter(getCoordinatesForRegion(region));
   }, [searchLocation, region]);
 
-  console.log(searchLocation);
-  console.log(region);
-  console.log(center);
-  console.log(searchResults);
   return !isLoaded ? (
     <div>Loading Map...</div>
   ) : (
